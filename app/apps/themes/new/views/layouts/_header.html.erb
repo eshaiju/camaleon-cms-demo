@@ -1,0 +1,41 @@
+<!-- <div id="delay_load_frame"></div>
+ --><div class="row">
+  <div class="container">
+    <div class="logo"> <a id="aLogo" href="index.html"> <%= image_tag 'logo.jpg' %></a> </div>
+  </div>
+</div>
+     <div class="row">
+        <div class="menubar">
+          <div class="container">
+            <div class="col-md-2 pdng_none"></div>
+            <div class="col-md-8 menu_block pdng_none">
+              <div class="navbar-header">
+                <button type="button" id="btn-menu" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+              </div>
+              <div id="navbar" class="collapse navbar-collapse">
+                <!-- <ul class="nav navbar-nav"> -->
+                  <!-- <li class="active"><a href="#">About us</a></li>
+                  <li><a href="product.html">Exclusive brands</a></li>
+                  <li><a href="#contact">Media</a></li>
+                  <li class="active"><a href="#">Careers</a></li>
+                  <li><a href="#about">Showrooms</a></li>
+                  <li><a href="#contact">Reach us</a></li> -->
+                  <%= raw draw_menu({container_id: "", container_class: "nav navbar-nav"}) %>
+                <!-- </ul> -->
+              </div>
+              <!--/.nav-collapse --> 
+            </div>
+            <div class="col-md-2 social_block pdng_none">
+              <ul>
+                <a href="#">
+                <li class="facebook"></li>
+                </a><a href="#">
+                <li class="twitter"></li>
+                </a><a href="#">
+                <li class="google_plus"></li>
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>

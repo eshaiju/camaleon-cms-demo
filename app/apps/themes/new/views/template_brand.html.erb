@@ -1,0 +1,28 @@
+<!--Banner-->
+
+<div class="inner-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+      	<%= image_tag "product-bg.jpg", class: "img-responsive"%>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Main Content-->
+<div class="container product">
+  <div class="row m-t-20 m-b-40">
+    <%= raw @post.the_content %>
+  </div>
+  <div class="row product-row animated bounceInLeft">
+  <% (current_site.the_post_type("brand").the_posts.decorate rescue {}).each do |brand| %>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+     <%= raw brand.the_link_thumb({}, {class: "img-responsive img-rounded col-md-12 col-lg-12"}) %>
+    <!-- <img src="images/products/heritage/1.jpg" alt="" class="img-responsive"> -->
+      <p><%= raw brand.content%></p>
+      <div class="model"><%= raw brand.title%></div>
+    </div>
+    <% end %>
+  </div>
+</div>
