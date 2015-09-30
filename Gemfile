@@ -31,7 +31,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'camaleon_cms', :git => 'https://github.com/owen2345/camaleon-cms-gem.git'
+gem 'camaleon_cms'
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console

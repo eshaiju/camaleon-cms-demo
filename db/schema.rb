@@ -77,6 +77,30 @@ ActiveRecord::Schema.define(version: 20150611161134) do
   add_index "metas", ["object_class"], name: "index_metas_on_object_class", using: :btree
   add_index "metas", ["objectid"], name: "index_metas_on_objectid", using: :btree
 
+  create_table "plugins_attacks", force: :cascade do |t|
+    t.string   "path",        limit: 255
+    t.string   "browser_key", limit: 255
+    t.integer  "site_id",     limit: 4
+    t.datetime "created_at"
+  end
+
+  add_index "plugins_attacks", ["browser_key"], name: "index_plugins_attacks_on_browser_key", using: :btree
+  add_index "plugins_attacks", ["path"], name: "index_plugins_attacks_on_path", using: :btree
+  add_index "plugins_attacks", ["site_id"], name: "index_plugins_attacks_on_site_id", using: :btree
+
+  create_table "plugins_contact_forms", force: :cascade do |t|
+    t.integer  "site_id",     limit: 4
+    t.integer  "count",       limit: 4
+    t.integer  "parent_id",   limit: 4
+    t.string   "name",        limit: 255
+    t.string   "slug",        limit: 255
+    t.text     "description", limit: 65535
+    t.text     "value",       limit: 65535
+    t.text     "settings",    limit: 65535
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string   "title",            limit: 255
     t.string   "slug",             limit: 255
